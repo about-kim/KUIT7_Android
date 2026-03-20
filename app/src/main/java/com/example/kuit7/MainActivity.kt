@@ -17,11 +17,13 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.kuit7.ui.theme.KUIT7week1Theme
 
 class MainActivity : ComponentActivity() {
@@ -31,75 +33,32 @@ class MainActivity : ComponentActivity() {
         setContent {
             KUIT7week1Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Box(Modifier.padding(innerPadding)) {
-                        Row {
-                            Column(
-                                Modifier
-                                    .padding(top = 30.dp, start = 70.dp),
-                                verticalArrangement = Arrangement.spacedBy(20.dp)
-                            ) {
-                                Box(
-                                    Modifier
-                                        .size(60.dp)
-                                        .background(Color.Black, shape = RoundedCornerShape(20.dp))
-                                )
-                                Box(
-                                    Modifier
-                                        .size(60.dp)
-                                        .border(
-                                            width = 2.dp,
-                                            color = Color.Black,
-                                            shape = RoundedCornerShape(20.dp)
-                                        )
-                                )
-                                Box(
-                                    Modifier
-                                        .size(76.dp)
-                                        .border(width = 1.dp, color = Color.Black)
-                                        .padding(8.dp)
-                                        .background(Color.Red)
-                                )
-                                Image(
-                                    painter = painterResource(R.drawable.image),
-                                    contentDescription = "강아지 이미지",
-                                    modifier = Modifier.size(80.dp)
-                                )
-                            }
-                            Column(
-                                Modifier
-                                    .padding(top = 30.dp, start = 60.dp),
-                                verticalArrangement = Arrangement.spacedBy(20.dp)
-                            ) {
-                                Box(
-                                    Modifier
-                                        .size(60.dp)
-                                        .background(Color.Black, shape = CircleShape)
-                                )
-                                Box(
-                                    Modifier
-                                        .size(60.dp)
-                                        .border(
-                                            width = 2.dp,
-                                            color = Color.Black,
-                                            shape = CircleShape
-                                        )
-                                )
-                                Box(
-                                    Modifier
-                                        .size(76.dp)
-                                        .border(width = 1.dp, color = Color.Black)
-                                        .padding(8.dp)
-                                        .background(Color.Blue, CircleShape)
-                                )
-                                Image(
-                                    painter = painterResource(R.drawable.image),
-                                    contentDescription = "강아지 이미지",
-                                    modifier = Modifier.size(80.dp)
-                                        .clip(CircleShape)
-                                )
-                            }
+                    Box(
+                        modifier = Modifier
+                            .padding(paddingValues = innerPadding)
+                            .padding(top = 50.dp, start = 50.dp)
+                            .size(300.dp)
+                            .border(
+                                width = 2.dp, color = Color.Black, shape = RoundedCornerShape(15.dp)
+                            )
+                            .background(Color.White)
+                    ) {
+                        Column(
+                            Modifier.padding(top = 20.dp, start = 20.dp),
+                            verticalArrangement = Arrangement.spacedBy(1.dp)
+                        ) {
+                            Image(
+                                painter = painterResource(R.drawable.picture),
+                                contentDescription = "프로필 사진",
+                                modifier = Modifier
+                                    .size(100.dp)
+                                    .clip(RoundedCornerShape(30.dp))
+                            )
+                            Text("이름: 김대한", fontSize = 15.sp)
+                            Text("학번: 202415176", fontSize = 15.sp)
+                            Text("학과: 컴퓨터공학부", fontSize = 15.sp)
+                            Text("생년월일: 2002/05/22", fontSize = 15.sp)
                         }
-
                     }
                 }
             }
