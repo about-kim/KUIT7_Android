@@ -1,4 +1,4 @@
-package com.example.kuit7
+package com.example.kuit7 //test
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
