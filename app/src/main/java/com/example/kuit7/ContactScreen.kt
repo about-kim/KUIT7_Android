@@ -40,6 +40,51 @@ fun ContactScreen(modifier: Modifier = Modifier) {
             image = R.drawable.call3,
             name = "홍길동",
             phone = "010-1234-5678"
+        ),
+        Call(
+            image = R.drawable.call1,
+            name = "박서연",
+            phone = "010-1234-5678"
+        ),
+        Call(
+            image = R.drawable.call2,
+            name = "김건국",
+            phone = "010-1234-5678"
+        ),
+        Call(
+            image = R.drawable.call3,
+            name = "홍길동",
+            phone = "010-1234-5678"
+        ),
+        Call(
+            image = R.drawable.call1,
+            name = "박서연",
+            phone = "010-1234-5678"
+        ),
+        Call(
+            image = R.drawable.call2,
+            name = "김건국",
+            phone = "010-1234-5678"
+        ),
+        Call(
+            image = R.drawable.call3,
+            name = "홍길동",
+            phone = "010-1234-5678"
+        ),
+        Call(
+            image = R.drawable.call1,
+            name = "박서연",
+            phone = "010-1234-5678"
+        ),
+        Call(
+            image = R.drawable.call2,
+            name = "김건국",
+            phone = "010-1234-5678"
+        ),
+        Call(
+            image = R.drawable.call3,
+            name = "홍길동",
+            phone = "010-1234-5678"
         )
     )
     Column(Modifier.fillMaxSize()) {
