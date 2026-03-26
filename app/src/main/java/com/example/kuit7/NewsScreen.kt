@@ -34,7 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun ContactScreen(modifier: Modifier = Modifier) {
+fun NewsScreen(modifier: Modifier = Modifier) {
     val newsLists = listOf<news>(
         news(
             image = R.drawable.image1,
@@ -286,6 +286,6 @@ fun ContactScreen(modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-private fun ContactScreenPreview() {
-    ContactScreen()
+private fun NewsScreenPreview() {
+    NewsScreen()
 }
