@@ -12,8 +12,8 @@ data class PostDto(
 )
 
 fun PostDto.toDomain(): Post = Post(
-        userId = userId,
-        id = id,
-        title = title,
-        body = body
-    )
+    userId = userId,
+    id = id,
+    title = title,
+    body = body
+)
