@@ -1,4 +1,4 @@
-package com.example.kuit7
+package com.kuit.android
 
 import org.junit.Test
 
