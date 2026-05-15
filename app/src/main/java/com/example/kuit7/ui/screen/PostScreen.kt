@@ -49,12 +49,6 @@ fun PostScreen(
             .padding(16.dp)
             .verticalScroll(rememberScrollState())
     ) {
-        Text(
-            text = "JSONPlaceholder API 테스트",
-            style = MaterialTheme.typography.headlineMedium
-        )
-
-        Spacer(modifier = Modifier.height(16.dp))
 
         // 입력 필드
         OutlinedTextField(
@@ -192,10 +186,6 @@ fun PostScreen(
 
         when (val state = uiState) {
             PostUiState.Idle -> {
-                Text(
-                    text = "버튼을 눌러 API를 테스트하세요.",
-                    style = MaterialTheme.typography.bodyMedium
-                )
             }
 
             PostUiState.Loading -> {

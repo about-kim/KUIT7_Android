@@ -18,12 +18,14 @@ object NetworkModule {
     @Singleton
     fun provideJson() : Json = Json{
         ignoreUnknownKeys = true
+        coerceInputValues = true
+        encodeDefaults = true
     }
     @Provides
     @Singleton
     fun provideRetrofit(json: Json) : Retrofit =
         Retrofit.Builder()
-            .baseUrl("https://jsonplaceholder.typicode.com")
+            .baseUrl("https://jsonplaceholder.typicode.com/")
             .addConverterFactory(
                 json.asConverterFactory("application/json".toMediaType()),
             ).build()
@@ -33,3 +35,4 @@ object NetworkModule {
     fun providePostApiService(retrofit: Retrofit) : PostApiService =
         retrofit.create(PostApiService::class.java)
 }
+//
